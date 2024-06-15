@@ -1,0 +1,24 @@
+diff --git a/build/index.js b/build/index.js
+index 01cb4206525dab0e564e07366bb0de1cc68ae2d1..bf8576acc9f23cbd5e9c9c9bd8cc2157c154b10f 100644
+--- a/build/index.js
++++ b/build/index.js
+@@ -846,6 +846,9 @@ class Runtime {
+       modulePath = this._resolveCjsModule(from, moduleName);
+     }
+     if (this.unstable_shouldLoadAsEsm(modulePath)) {
++      if (moduleName.includes("auto-bind")) {
++        console.log("auto-bind: esm module import error!");
++      }
+       // Node includes more info in the message
+       const error = new Error(
+         `Must use import to load ES Module: ${modulePath}`
+@@ -1458,6 +1461,9 @@ class Runtime {
+     this._currentlyExecutingModulePath = lastExecutingModulePath;
+   }
+   transformFile(filename, options) {
++    if (filename.includes("auto-bind")) {
++      console.log("auto-bind: execute transform");
++    }
+     const source = this.readFile(filename);
+     if (options?.isInternalModule) {
+       return source;

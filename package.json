@@ -1,0 +1,31 @@
+{
+  "name": "transform-test",
+  "private": false,
+  "scripts": {
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.24.7",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.3.3",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.4",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "auto-bind": "^5.0.1",
+    "react": "^18.3.1"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "jest-runtime@29.7.0": "patches/jest-runtime@29.7.0.patch"
+    }
+  }
+}
