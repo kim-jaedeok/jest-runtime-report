@@ -25,7 +25,8 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "jest-runtime@29.7.0": "patches/jest-runtime@29.7.0.patch"
+      "jest-runtime@29.7.0": "patches/jest-runtime@29.7.0.patch",
+      "auto-bind@5.0.1": "patches/auto-bind@5.0.1.patch"
     }
   }
 }

@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
+  auto-bind@5.0.1:
+    hash: qbd3eawwvqmd52tirp3rzpvmv4
+    path: patches/auto-bind@5.0.1.patch
   jest-runtime@29.7.0:
     hash: ice6k5bgwqn4nu7g5f7suycvwi
     path: patches/jest-runtime@29.7.0.patch
@@ -15,7 +18,7 @@ importers:
     dependencies:
       auto-bind:
         specifier: ^5.0.1
-        version: 5.0.1
+        version: 5.0.1(patch_hash=qbd3eawwvqmd52tirp3rzpvmv4)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -5352,7 +5355,7 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  auto-bind@5.0.1: {}
+  auto-bind@5.0.1(patch_hash=qbd3eawwvqmd52tirp3rzpvmv4): {}
 
   available-typed-arrays@1.0.5: {}
 
